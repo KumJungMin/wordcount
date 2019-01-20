@@ -1,0 +1,20 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'static/style.css' %}" />
+<body>
+<div>
+    <img style="width:100%;" src="{% static '1234.png' %}">
+    <div style="width:100%; position:relative; top:50%; margin-top:-500px; left:50%; margin-left: -350px;">
+        <div style="width: 100px; height: 30px;">
+            <a  style="color:white; text-shadow :2px 2px 2px gray; text-decoration: none; font-size: 18px; font-weight: bold;" href="{% url 'about' %}">ABOUT</a>
+        </div>
+        <form action="{% url 'count' %}" >
+            <textarea cols="70" rows="10" name="fulltext" placeholder="문장을 입력해보세요. 띄어쓰기 단위로 단어를 세어줍니다."
+            style="border: 0; font-size: 18px; padding: 10px;">
+            </textarea>
+            <br>
+            <input type="submit" style="border: 0; font-size: 18px; position:relative; left: 44%; font-weight: bold;" value="Count!"/>
+        </form>
+    </div>    
+</div>
+</body>

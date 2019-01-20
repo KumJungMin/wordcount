@@ -1,0 +1,37 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'static/style.css' %}" />
+<body>
+    <div>
+        <img style="width:100%;" src="{% static '221.png' %}">
+        <div style="width:100%; position:relative; top:50%; margin-top:-500px; left:50%; margin-left: -350px;">
+            <div style="width: 200px; height: 73px; position:relative; top: -200px; left: 620px;">
+                <p style="font-size: 70px; font-weight: bold; text-shadow :2px 2px 2px gray;">RESULT</p>
+            </div>
+            <div style="width: 100px; height: 30px; position: relative; top: -100px;">
+                <a  style="color:white; text-shadow :2px 2px 2px gray; text-decoration: none; font-size: 28px; font-weight: bold;" href="{% url 'home' %}">RESTART</a>
+            </div>
+            <div style="width: 700px; height: 100px; border: 1px solid none; background-color: rgba(0,0,0,0.7); color:white; padding-top: 10px; position: relative; top: -100px;"> 
+                <h1 style="text-align:center;">당신이 입력한 텍스트는 <!--총단어수--> 단어로 구성되어 있습니다.</h1>
+            </div>
+            <div style="width: 700px; border: 1px solid none; position: relative; top:-100px;">
+                <h1>입력한 텍스트: </h1>
+                {{ fulltext }}
+                <h1>단어 카운트:</h1>
+                {% for word, countTotal in dictionary %}
+                {{ word }} - {{ countTotal }}
+                <br>
+                {% endfor %}
+                <!-- '단어' - '단어나온 횟수' -->
+            </div>
+        </div>    
+    </div>
+</body>
+                
+        
+        
+        
+        
+        
+
+
+

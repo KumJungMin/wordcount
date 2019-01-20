@@ -1,0 +1,26 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'static/style.css' %}" />
+
+<body>
+        <div>
+            <img style="width:100%;" src="{% static '33.png' %}">
+            <div style="width:100%; position:relative; top:50%; margin-top:-500px; left:50%; margin-left: -350px;">
+                <div style="width: 200px; height: 73px; position:relative; top: -200px; left: 620px;">
+                    <p style="font-size: 70px; font-weight: bold; text-shadow :2px 2px 2px gray;">ABOUT</p>
+                </div>
+                <div style="width: 100px; height: 30px;">
+                    <a  style="color:white; text-shadow :2px 2px 2px gray; text-decoration: none; font-size: 28px; font-weight: bold;" href="{% url 'home' %}">HOME</a>
+                </div>
+                <div style="width: 700px; height: 100px; border: 1px solid none; background-color: rgba(0,0,0,0.7); color:white; padding-top: 10px;"> 
+                    <h1 style="text-align:center;">해당 서비스는 띄어쓰기를 기반으로 단어를 셉니다.</h1>
+                </div>
+
+
+            </div>    
+        </div>
+        </body>
+        
+
+
+
+
